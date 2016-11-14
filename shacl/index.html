@@ -1383,25 +1383,26 @@ ex:MyInstance
 		<section id="validation">
 			<h2>Validation and Graphs</h2>
 			<p>
-				The definition for <dfn data-lt="validation|validates|validated|validate">validating</dfn> a <a>data graph</a>
-				against a <a>shapes graph</a> as well as a <a>node</a> from the data graph against a <a>shape</a> from the shapes graph is provided below. The result of a validation is either "successful" or "not successful":
+				<dfn data-lt="validation|validates|validated|validate">Validation</dfn> compares a <a>data graph</a>
+				against a <a>shapes graph</a> or, alternatively, a <a>node</a> from the data graph against a <a>shape</a> from the shapes graph to test conformance of the data graph to the constraints of the shapes graph. 
+				The result of validation is either "conforms" or "does not conform":
 			</p>
 
 			<div id="def-validation" class="def def-text">
 				<div class="def-header">VALIDATION DEFINITION</div>
 				<div class="def-text-body">
-					Validation is the process of determining whether a <a>data graph</a>, or <a>nodes</a> in the <a>data graph</a>, is consistent with the constraints in a <a>shapes graph</a>. 
-					Data graphs or nodes that are consistent with the constraints in the shapes graph are said to "successfully validate"; those that are not consistent are said to "not successfully validate".
+					Validation is the process of determining whether a <a>data graph</a>, or <a>nodes</a> in the <a>data graph</a>, conforms to the constraints in a <a>shapes graph</a>. 
+					Data graphs or nodes that are consistent with the constraints in the shapes graph are said to "conform"; those that are not consistent are said to "not conform".
 					<ul>
-						<li>A <a>node</a> successfully validates against a <a>shape</a> if and only if
-							either it does not successfully validate against some <a>filter</a> of the shape,
+						<li>A <a>node</a> conforms to a <a>shape</a> if and only if
+							either it does not conform to some <a>filter</a> of the shape,
 							or if none of the <a>constraints</a> in the shape produce either a <a>validation result</a> or a <a>failure</a> for the node.
 						</li>
-						<li>A <a>data graph</a> successfully validates against a <a>shape</a> if and only if
-							each node that is in <del>any</del>(all?) of the <a>targets</a> of the shape validates against the shape.
+						<li>A <a>data graph</a> conforms against a <a>shape</a> if and only if
+							each node that is in <del>any</del>(all?) of the <a>targets</a> of the shape conforms to the shape.
 						</li>
-						<li>A <a>data graph</a> successfully validates against a <a>shapes graph</a> if and only if
-							the data graph successfully validates against each <a>shape</a> in the shapes graph.
+						<li>A <a>data graph</a> conforms to a <a>shapes graph</a> if and only if
+							the data graph conforms to each <a>shape</a> in the shapes graph.
 						</li>
 					</ul>
 				</div>
